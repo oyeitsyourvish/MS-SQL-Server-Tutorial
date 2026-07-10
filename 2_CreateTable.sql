@@ -21,10 +21,38 @@ CREATE TABLE Employee
     Job NVARCHAR(MAX)
 );
 
+-- Inserting Data inside the Employee Table which is present in SQLTUTORIAL db
 INSERT INTO Employee (Name, Email, Age, Salary, Gender, IsActive, DateOfBirth, LoginTime, CreatedDate, Job)
-Values('rohit','rohit@gmail.com',25,35000,'M',1,'1999-08-02','09:30:00',GetDate(),'java developer')
+Values
+('vishal','vishalll@gmail.com',26,34000,'M',1,'1999-11-03','09:30:00',GetDate(),'dotnet developer'),
+('rohit','rohit@gmail.com',25,35000,'M',1,'1999-08-02','09:30:00',GetDate(),'java developer'),
+('radha','radha@gmail.com',29,45000,'F',1,'1999-05-11','09:30:00',GetDate(),'angular developer'),
+('teju','teju@gmail.com',25,25000,'F',1,'2000-06-29','09:30:00',GetDate(),'manual testing'),
+('gayu','gayu@gmail.com',26,30000,'F',1,'1999-04-20','09:30:00',GetDate(),'data analyst'),
+('vish','vish@gmail.com',26,15000,'F',1,'1999-09-25','09:30:00',GetDate(),'manual testing'),
+('sanj','sanj@gmail.com',26,32000,'F',1,'1999-09-19','09:30:00',GetDate(),'human resource'),
+('rahul','rahul@gmail.com',27,38000,'M',1,'1998-07-24','09:30:00',GetDate(),'automation testion')
 PRINT('DATA INSERTED SUCCESSFULLY')
 
-
+--Fetch the Data.
 USE SQLTUTORIAL
 SELECT * FROM Employee
+
+--Updating Column inside table in the basis of ID.
+UPDATE Employee SET DateOfBirth = '1999-10-03' WHERE Id = 108;
+PRINT ('Updated')
+
+-- Delete Column inside table in the basis of ID
+DELETE from Employee where Id = 118;
+PRINT ('Deleted Successfully')
+
+-- Delete All The Data From the Table
+DELETE from Employee ;
+PRINT('All Data Deleted')
+
+-- Truncate Table table will delete all the row and reset the id from start again.
+TRUNCATE TABLE Employee ; 
+PRINT ('Truncated Successfully')
+
+
+
