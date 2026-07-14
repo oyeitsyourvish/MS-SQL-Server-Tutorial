@@ -1,5 +1,6 @@
--- Local Temporary Table (Use single # for Local)
-
+-- 1. Local Temporary Table (Use single # for Local)
+--    A Local Temporary Table is visible only inside the session (connection) that created it. Once the session ends, SQL Server automatically deletes it.
+--    We cant acces it from another query window.
 CREATE TABLE #LocTemTable (
 ID INT PRIMARY KEY IDENTITY(1,1),
 NAME VARCHAR(30),
@@ -19,7 +20,9 @@ DROP TABLE #LocTemTable;
 
 -------------------------------------------------------------------------------------------------------------------
 
--- Global Temporary Table (Use single ## for Local)
+-- 2. Global Temporary Table (Use single ## for global)
+-- A Global Temporary Table is visible to all sessions.Every user can access it.
+--Open another query window. and you can access it Because Global Temp Table is shared across sessions.
 
 CREATE TABLE ##GlobalTemTable (
 ID INT PRIMARY KEY IDENTITY(1,1),
