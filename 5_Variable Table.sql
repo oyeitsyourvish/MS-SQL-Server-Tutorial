@@ -1,3 +1,9 @@
+
+-- Variable Table :->
+-- A Table Variable is a temporary table stored in a variable.
+-- It behaves like a table, but instead of creating it with CREATE TABLE, you declare it using the DECLARE keyword.
+-- Think of it as a variable that can store multiple rows and columns.
+
 DECLARE @VarTable TABLE
 (
     ID UNIQUEIDENTIFIER PRIMARY KEY DEFAULT NEWID(),
@@ -7,6 +13,7 @@ DECLARE @VarTable TABLE
     SALARY DECIMAL(10,2)
 );
 
+use SQLTUTORIAL
 INSERT INTO @VarTable (NAME, EMAIL, AGE, SALARY)
 SELECT NAME, EMAIL, AGE, SALARY
 FROM Employee;
