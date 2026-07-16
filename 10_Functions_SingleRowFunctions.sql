@@ -27,7 +27,7 @@ USE SQLTUTORIAL
 
 
 
-	--	B) String Functions :-
+	--	B) Numeric Functions :-
 		-- i) ABS ()
 			SELECT ABS(-20);
 
@@ -47,6 +47,7 @@ USE SQLTUTORIAL
 			SELECT POWER(2,3);
 
 
+
 	--	C) Date Functions :-
 		-- i) GETDATE() 
 			SELECT GETDATE();
@@ -59,6 +60,8 @@ USE SQLTUTORIAL
 
 		-- iv) DAY() 
 			SELECT DAY(GETDATE());
+
+
 
 	--	D) Logical Functions :-
 		
