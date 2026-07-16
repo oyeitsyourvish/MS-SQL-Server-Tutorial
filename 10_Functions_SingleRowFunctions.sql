@@ -31,17 +31,39 @@ USE SQLTUTORIAL
 		-- i) ABS ()
 			SELECT ABS(-20);
 
-		-- i) ROUND() 
+		-- ii) ROUND() 
 			SELECT ROUND(15.678,2);
 
-		-- i) CEILING() 
+		-- iii) CEILING() 
 			SELECT CEILING(10.3);
 
-		-- i) FLOOR() 
+		-- iv) FLOOR() 
 			SELECT FLOOR(10.3);
 
-		-- i) SQRT() 
+		-- v) SQRT() 
 			SELECT SQRT(25);
 
-		-- i) POWER() 
+		-- vi) POWER() 
 			SELECT POWER(2,3);
+
+
+	--	C) Date Functions :-
+		-- i) GETDATE() 
+			SELECT GETDATE();
+
+		-- ii) YEAR() 
+			SELECT YEAR(GETDATE());
+
+		-- iii) MONTH() 
+			SELECT MONTH(GETDATE());
+
+		-- iv) DAY() 
+			SELECT DAY(GETDATE());
+
+	--	D) Logical Functions :-
+		
+		-- i) IIF() 
+			SELECT IIF(30>35,'PASS','FAIL');
+
+		-- ii) CHOOSE() 
+			SELECT CHOOSE(2,'RED','BLUE','PURPLE','GREEN');
