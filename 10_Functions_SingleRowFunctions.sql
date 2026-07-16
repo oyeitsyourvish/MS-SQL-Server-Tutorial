@@ -22,9 +22,26 @@ USE SQLTUTORIAL
 		-- vi) REPLACE() 
 			SELECT REPLACE ('RAJA BABU', 'BABU','TELI');
 
-		-- i) CONCAT() 
+		-- vii) CONCAT() 
 			SELECT CONCAT ('RAJU',' ','RAMA',' ', 'SHRIVASTAV');
 
 
 
 	--	B) String Functions :-
+		-- i) ABS ()
+			SELECT ABS(-20);
+
+		-- i) ROUND() 
+			SELECT ROUND(15.678,2);
+
+		-- i) CEILING() 
+			SELECT CEILING(10.3);
+
+		-- i) FLOOR() 
+			SELECT FLOOR(10.3);
+
+		-- i) SQRT() 
+			SELECT SQRT(25);
+
+		-- i) POWER() 
+			SELECT POWER(2,3);
