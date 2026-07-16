@@ -1,0 +1,30 @@
+USE SQLTUTORIAL
+-- FUNCTIONS :- 1. Single Row Functions  2.Multirow Functions
+
+-- 1) SINGLE ROW FUNCTIONS :- it works on one row at a time
+
+     --	A) String Functions :-
+		-- i) UPPER() 
+			SELECT NAME, UPPER(NAME) FROM emp;
+
+		-- ii) LOWER() 
+			SELECT NAME, LOWER(NAME) FROM emp;
+
+		-- iii) LEN() 
+			SELECT NAME, LEN(NAME) FROM emp;
+
+		-- iv) TRIM() 
+			SELECT NAME, TRIM(NAME) FROM emp;
+
+		-- v) SUBSTRING() 
+			SELECT NAME, SUBSTRING(NAME,2,4) FROM emp;
+
+		-- vi) REPLACE() 
+			SELECT REPLACE ('RAJA BABU', 'BABU','TELI');
+
+		-- i) CONCAT() 
+			SELECT CONCAT ('RAJU',' ','RAMA',' ', 'SHRIVASTAV');
+
+
+
+	--	B) String Functions :-
