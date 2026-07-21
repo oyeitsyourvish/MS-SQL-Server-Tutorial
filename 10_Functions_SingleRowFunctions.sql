@@ -70,3 +70,37 @@ USE SQLTUTORIAL
 
 		-- ii) CHOOSE() 
 			SELECT CHOOSE(2,'RED','BLUE','PURPLE','GREEN');
+
+-------------------------------------------------------------------------------------------------------------------------------
+
+-- Advanced topic 
+
+-- 1) DATEADD :- Used for add extra
+	SELECT DATEADD(DAY,4,GETDATE()) AS AddedDate --Adding 4 day extra from now 
+	SELECT DATEADD(MONTH,4,GETDATE()) AS AddedMonth --Adding 4 month extra from now 
+	SELECT DATEADD(YEAR,4,GETDATE()) AS AddedYear --Adding 4 year extra from now 
+
+-- 2) DATEPART :- Its ditto same like c) Date Function
+	SELECT DATEPART(DAY,GETDATE()) AS CurrentDate
+	SELECT DATEPART(MONTH,GETDATE()) AS CurrentMonth
+	SELECT DATEPART(YEAR,GETDATE()) AS CurrentYear
+	-- OR WE CAN USE IT LIKE THIS 
+	SELECT GETDATE()
+	SELECT DAY(GETDATE())
+	SELECT MONTH(GETDATE())
+	SELECT YEAR(GETDATE())
+
+-- 3) DATEDIFF :- It show the differece from the current date
+	SELECT DATEDIFF(DAY,'2026-4-21',GETDATE()) --it will be count the days from current date (CURRENTDATE - PROVIDED DATE ) = DAYS)
+	SELECT DATEDIFF(MONTH,'2026-1-21',GETDATE()) --it will be count the MONTH from current date (CURRENTDATE - PROVIDED DATE ) = MONTH)
+	SELECT DATEDIFF(YEAR,'1947-8-15',GETDATE()) --it will be count the YEAR from current date (CURRENTDATE - PROVIDED DATE ) = YEAR)
+
+-- 4) DATENAME :- It will show the name of that day
+	SELECT DATENAME(MONTH, GETDATE()) -- it show month name
+	SELECT DATENAME(WEEKDAY,GETDATE()) -- it show current day name 
+
+-- 5) EOMONTH :- it show the last date of the month
+	SELECT EOMONTH(GETDATE()) -- it shows the month last date
+	SELECT EOMONTH('2025-04-01') -- it shows the specified month last date
+
+
