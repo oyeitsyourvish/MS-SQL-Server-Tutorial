@@ -103,4 +103,20 @@ USE SQLTUTORIAL
 	SELECT EOMONTH(GETDATE()) -- it shows the month last date
 	SELECT EOMONTH('2025-04-01') -- it shows the specified month last date
 
+-------------------------------------------------------------------------------------------------------------------------------------------------
+
+-- Advanced Topics :-
+
+	-- 1) ISDATE :- it will check the date and give the result in bolean (1 or 0)
+		  SELECT ISDATE('2025-08-23') -- 1 Means the date is write
+		  SELECT ISDATE('NOT A DATE') -- 0 means date is wrong
+
+	-- 2) TRYCAST :- it will check The date and give the result if the date is wrong it gives null elese show thate date
+		  SELECT TRY_CAST('2025-08-23' AS DATETIME)
+		  SELECT TRY_CAST('NOT A DATE' AS DATETIME)
+
+	-- 3) TRYCAST :- it will check The date and give the result if the date is wrong it gives null else show thate date
+					-- And also same as TRY_CAST.
+		  SELECT TRY_CONVERT(DATETIME, '2025-08-23')
+		  SELECT TRY_CONVERT(DATETIME, 'NOT A DATE')
 
