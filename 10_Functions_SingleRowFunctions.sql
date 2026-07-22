@@ -25,6 +25,12 @@ USE SQLTUTORIAL
 		-- vii) CONCAT() 
 			SELECT CONCAT ('RAJU',' ','RAMA',' ', 'SHRIVASTAV');
 
+		-- viii) ASCII()
+			SELECT ASCII('V')
+
+		-- ix) CHAR()
+			SELECT CHAR(86)
+
 
 
 	--	B) Numeric Functions :-
